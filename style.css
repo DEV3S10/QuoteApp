@@ -1,0 +1,137 @@
+:root {
+    --bg-light: #ffffff;
+    --bg-dark: radial-gradient(circle at top, #1e293b, #020617);
+    --card-light: #e5e7eb;
+    --card-dark: rgba(255, 255, 255, 0.06);
+    --text-light: #020617;
+    --text-dark: #f8fafc;
+    --accent: #6ee7b7;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-light);
+    color: var(--text-light);
+    transition: 0.4s;
+}
+
+body.dark {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.card {
+    padding: 40px;
+    border-radius: 16px;
+    background: var(--card-light);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: 0.4s;
+}
+
+body.dark .card {
+    background: var(--card-dark);
+    backdrop-filter: blur(12px);
+}
+
+.fade {
+    animation: fade 0.5s ease;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.quote {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.author {
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.shuffle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    margin-top: 30px;
+    background: var(--accent);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.toggle input {
+    width: 50px;
+    height: 26px;
+    appearance: none;
+    background: #ccc;
+    border-radius: 20px;
+    position: relative;
+}
+
+.toggle input::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.toggle input:checked {
+    background: #3b82f6;
+}
+
+.toggle input:checked::before {
+    left: 26px;
+}
+
+footer {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 14px;
+}
+
+.socials {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 12px;
+}
+
+.history {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.history ul {
+    padding-left: 20px;
+    max-height: 150px;
+    overflow-y: auto;
+}
