@@ -125,13 +125,3 @@ footer {
     gap: 12px;
 }
 
-.history {
-    margin-top: 40px;
-    text-align: left;
-}
-
-.history ul {
-    padding-left: 20px;
-    max-height: 150px;
-    overflow-y: auto;
-}
