@@ -41,7 +41,7 @@ No build tools or installations required.
 
 ## 🌐 API Used
 
-* **Quotable API** — [https://api.quotable.io](https://api.quotable.io)
+* **Quotable API** — [https://dummyjson.com/quotes/random](https://dummyjson.com/quotes/random)
 
 The application fetches random quotes using the endpoint:
 
